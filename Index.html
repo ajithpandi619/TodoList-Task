@@ -1,0 +1,120 @@
+<!DOCTYPE >
+<html>
+  <head>
+    <title>Demo: TODO</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="icon" href="/path/to/your/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.css"
+    />
+    <link rel="stylesheet" href="/path/to/your/styles/custom.css" />
+  </head>
+  <body>
+    <main role="main" class="container extra-bottom">
+      <h1 class="mt-5">TODO List Demo App</h1>
+      <p><mark>Do it now.</mark></p>
+    </main>
+
+    <div class="container">
+      <!-- Button trigger modal -->
+      <div style="text-align: right">
+        <button
+          type="button"
+          class="blue_btn btn btn-outline-info btn-sm"
+          data-bs-toggle="modal"
+          data-bs-target="#task-modal"
+          data-source="New Task"
+        >
+          Add Task
+        </button>
+      </div>
+
+      <div
+        class="modal fade"
+        id="task-modal"
+        tabindex="-1"
+        aria-labelledby="Label"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="Label">Add a task</h5>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <div class="input-group mb-3">
+                <span class="input-group-text" id="task-form-display"
+                  >Task</span
+                >
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Description of task"
+                  aria-label="task-name"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+              <button id="submit-task" type="button" class="btn btn-primary">
+                Save changes
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Todo Table-->
+    <div class="container table-responsive">
+      <table class="table">
+        <thead>
+          <tr>
+            <th class="task-id">Id</th>
+            <th class="task">Task Name</th>
+            <th class="status">Status</th>
+            <th class="update">Edit</th>
+            <th class="update">Remove</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <!-- row updated here -->
+        </tbody>
+      </table>
+    </div>
+
+    <footer class="footer">
+      <div class="container">
+        <p class="text-muted">
+          <small>Todo List</small>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Body content as before... -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="./Todo.js"></script>
+  </body>
+</html>
